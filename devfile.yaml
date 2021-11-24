@@ -12,7 +12,7 @@ metadata:
 components:
   - name: buildguidance
     container:
-      image: buildguidanceimage-placeholder
+      image: registry.redhat.io/codeready-workspaces/plugin-java11-rhel8@sha256:cff9e47f83c6140d442721ed4d78e029a55f98bdca8efffbba8513656a1b28a7
       memoryLimit: 1024Mi
       endpoints:
         - name: http-8081
@@ -21,7 +21,7 @@ components:
     attributes:
       tool: console-import
     container:
-      image: quay.io/eclipse/che-quarkus:next
+      image: registry.redhat.io/codeready-workspaces/plugin-java11-rhel8@sha256:cff9e47f83c6140d442721ed4d78e029a55f98bdca8efffbba8513656a1b28a7
       memoryLimit: 1512Mi
       mountSources: true
       volumeMounts:
