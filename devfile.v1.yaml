@@ -44,17 +44,17 @@ components:
         name: tests
         port: 8081
 commands:
-  - name: 1. Package the application
-    actions:
-      - type: exec
-        component: maven
-        command: mvn package
-        workdir: '${CHE_PROJECTS_ROOT}/camel-demo'
-  - name: 2. Start Quarkus in devmode (hot deploy + debug)
+  - name: Run in dev mode
     actions:
       - type: exec
         component: maven
         command: 'mvn compile quarkus:dev -Dquarkus.live-reload.instrumentation=false'
+        workdir: '${CHE_PROJECTS_ROOT}/camel-demo'
+  - name: Build
+    actions:
+      - type: exec
+        component: maven
+        command: mvn package
         workdir: '${CHE_PROJECTS_ROOT}/camel-demo'
   - name: Attach remote debugger
     actions:

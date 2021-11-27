@@ -4,7 +4,7 @@ metadata:
   version: 1.1.0
   attributes:
     alpha.build-context: .
-    alpha.build-dockerfile: src/main/docker/Dockerfile.jvm.multi-stage
+    alpha.build-dockerfile: Dockerfile
   displayName: Camel Demo
   description: Camel Demo based on Quarkus
   projectType: "quarkus"
