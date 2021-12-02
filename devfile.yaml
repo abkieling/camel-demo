@@ -37,12 +37,12 @@ commands:
   - id: init-compile
     exec:
       component: tools
-      commandLine: "mvn -Dmaven.repo.local=/home/user/.m2/repository compile"
+      commandLine: "mvn compile"
       workingDir: $PROJECTS_ROOT
   - id: dev-run
     exec:
       component: tools
-      commandLine: "mvn -Dmaven.repo.local=/home/user/.m2/repository quarkus:dev -Djava.util.logging.manager=org.jboss.logmanager.LogManager"
+      commandLine: "mvn quarkus:dev -Djava.util.logging.manager=org.jboss.logmanager.LogManager"
       hotReloadCapable: true
       group:
         kind: run
